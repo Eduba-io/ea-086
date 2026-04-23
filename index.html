@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A read on where AI fits in DeckDive's scoring pipeline | For DeckDive</title>
+  <meta name="description" content="You screen decks for Credit Agricole and Vertis SGR. The first question their deal desk will ask on a bigger contract is how your scoring stays consistent.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div data-eduba="banner" style="background:#0a0a0a;color:#f5f5f5;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:0.01em;border-bottom:1px solid #1f1f1f;position:relative;z-index:1000;">
+  <a href="https://eduba.io" target="_blank" rel="noopener" style="color:#f5f5f5;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:-0.02em;line-height:1;">eduba</a>
+  <span style="opacity:0.88;">Prepared by Eduba for DeckDive &mdash; Emerge Americas 2026</span>
+</div>
+
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="logo-wrap" href="https://www.deckdive.ai/" target="_blank" rel="noopener" aria-label="DeckDive" style="border-bottom:0;">
+        <img src="logo.png" alt="DeckDive">
+      </a>
+      <span class="topbar-tag">Prepared for the DeckDive team</span>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow"><span class="dot"></span> A working note for DeckDive</span>
+        <h1>A read on where AI fits in DeckDive's scoring pipeline, <span class="accent">and where deterministic code does the work better.</span></h1>
+        <p class="hero-sub">You built a platform that reads pitch decks and ranks them against a fund's thesis. Here is the layer that sits above the model.</p>
+      </div>
+    </section>
+
+    <section class="pitch">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">The hypothesis</div>
+        </div>
+        <p class="lede">You built a platform that reads pitch decks and ranks them against a fund's thesis. <a href="https://www.credit-agricole.it/" target="_blank" rel="noopener">Credit Agricole</a> and <a href="https://www.vertis.it/" target="_blank" rel="noopener">Vertis SGR</a> trust the output enough to put their names on your site. That earns a next question from every serious buyer after them: how does the scoring stay consistent when one fund rewrites its thesis, another adds a sector filter, and a third asks where a specific signal came from.</p>
+        <p>Most AI products answer that question with more model. The layer that actually solves it sits above the model. We call it computational orchestration.</p>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">The 60 / 30 / 10 read</div>
+          <h2>A system like yours, sorted by layer.</h2>
+          <p>Teams who skip this distinction ship LLM calls where Postgres would finish the job faster, cheaper, and with an audit trail a bank lawyer can read.</p>
+        </div>
+
+        <div class="layers" role="list">
+          <div class="layer l60" role="listitem">
+            <div class="pct">60%</div>
+            <div class="label">Traditional code</div>
+            <p>Ingestion, parsing, structured extraction, benchmark lookups, dashboard state.</p>
+          </div>
+          <div class="layer l30" role="listitem">
+            <div class="pct">30%</div>
+            <div class="label">Rule-based logic</div>
+            <p>Fund-specific filters, compliance guardrails, scoring weights, override rules.</p>
+          </div>
+          <div class="layer l10" role="listitem">
+            <div class="pct">10%</div>
+            <div class="label">Genuine AI</div>
+            <p>The semantic read on a deck, the open-ended Q&amp;A, the narrative summary.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Case study</div>
+          <h2>We ran this shape with Feeld.</h2>
+          <p>A product company whose CTO wanted the same thing you do: operationalize AI inside the product without handing the roadmap to a vendor.</p>
+        </div>
+
+        <div class="case">
+          <div>
+            <div class="case-meta">Feeld / Andrew Santus, CTO</div>
+            <h3>Scoped sprint. A framework the team keeps using after we leave.</h3>
+            <p>A workshop, a set of advisory calls, an Organizational Context Architecture, and a Strategic Operations Framework. That is the shape of the first engagement.</p>
+          </div>
+          <ul>
+            <li><span class="tick" aria-hidden="true"></span><span><strong>Workshop</strong> to map the real AI, code, and rule boundaries inside the product.</span></li>
+            <li><span class="tick" aria-hidden="true"></span><span><strong>Advisory calls</strong> to pressure-test the architecture against live deals.</span></li>
+            <li><span class="tick" aria-hidden="true"></span><span><strong>Organizational Context Architecture</strong> delivered as a layered spec.</span></li>
+            <li><span class="tick" aria-hidden="true"></span><span><strong>Strategic Operations Framework</strong> the team runs after we hand it over.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <div class="method">
+          <div class="kicker" style="color:var(--secondary);margin-bottom:10px;">The published method</div>
+          <h2>ICM: Interpretable Context Methodology.</h2>
+          <p>Agent context organized as a layered filesystem that a small team can maintain and a compliance reviewer can audit. For a scoring product with investor-specific criteria and a bank partner, it is the remedy for prompt drift and review-cycle pain.</p>
+          <div class="links">
+            <a href="https://github.com/RinDig/Interpretable-Context-Methodology-ICM-" target="_blank" rel="noopener">ICM on GitHub</a>
+            <a href="https://eduba.io/" target="_blank" rel="noopener">eduba.io</a>
+          </div>
+        </div>
+
+        <div class="partner-line">
+          For the deeper engineering work that sits below orchestration (production data pipelines, model serving at scale), Eduba partners with <a href="https://www.nlplogix.com/" target="_blank" rel="noopener">NLP Logix</a>, who have been in machine learning since 2011 and run over 150 data scientists.
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-card">
+          <div>
+            <h2>Thirty minutes with Matt.</h2>
+            <p>Bring one scoring criterion you wish you trusted more. We will draw the pipeline on a whiteboard and mark the layers.</p>
+            <div class="cta-meta">
+              <strong>Matt Creamer</strong>, CRO, Eduba.<br>
+              Community-facing, enterprise outreach. He sets the call, Jake runs it.
+            </div>
+          </div>
+          <div class="cta-right">
+            <a class="btn" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener" style="border-bottom:0;">
+              Book 30 minutes with Matt <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <div class="cta-meta">Or write directly: <a href="mailto:thecro@eduba.io">thecro@eduba.io</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>Prepared by Eduba. <a href="https://eduba.io/" target="_blank" rel="noopener">eduba.io</a> &middot; <a href="https://eduba.io/works" target="_blank" rel="noopener">More case studies</a></div>
+      <div>A working note for DeckDive, not a public page.</div>
+    </div>
+  </footer>
+
+<footer data-eduba="footer" style="background:#0a0a0a;color:#dcdcdc;padding:36px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;border-top:1px solid #1f1f1f;margin-top:48px;">
+  <div style="max-width:1040px;margin:0 auto;">
+    <div style="display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start;">
+      <div style="min-width:240px;flex:1;">
+        <div style="margin-bottom:6px;"><a href="https://eduba.io" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:none;font-weight:800;font-size:20px;letter-spacing:-0.02em;">eduba</a></div>
+        <div style="opacity:0.85;margin-bottom:4px;">Van Clief Media LLC, dba Eduba</div>
+        <div style="opacity:0.7;">Veteran-owned AI consulting and training firm</div>
+      </div>
+      <div style="min-width:220px;flex:1;">
+        <div style="color:#ffffff;font-weight:600;margin-bottom:2px;">Matt Creamer, CRO</div>
+        <div style="margin-bottom:10px;"><a href="mailto:thecro@eduba.io" style="color:#dcdcdc;text-decoration:underline;">thecro@eduba.io</a></div>
+        <div style="opacity:0.85;">Founder: Jake Van Clief</div>
+      </div>
+      <div style="min-width:180px;flex:1;">
+        <div style="margin-bottom:4px;"><a href="https://eduba.io" target="_blank" rel="noopener" style="color:#dcdcdc;text-decoration:underline;">eduba.io</a></div>
+        <div style="opacity:0.85;">Palm Coast, FL</div>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding-top:16px;border-top:1px solid #1f1f1f;opacity:0.62;font-size:12px;line-height:1.55;">
+      This site was custom-built by Eduba as a conference pitch. It is not affiliated with or operated by DeckDive.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
